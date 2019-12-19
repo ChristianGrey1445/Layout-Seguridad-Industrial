@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">   
+<head>    
+	<meta charset="iso-8859-1">   
+	<meta name="author" content="Cristian Martínez Colín">
+	<meta name="description" content="PMN01.html">
+	<meta name="keyword" content="PMN01">
+	<title>PMN01</title>
+	<link rel="shortcut icon" type="image/png" href="../../imagenes/icono.png"/>
+	<link rel="stylesheet" href="../../style/estilos principal.css" />
+	
+</head>
+<body>
+	<div id="cuerpo">
+		<header class="cabecera">
+			<ul>
+				<li><img id="imagen" src="../../imagenes/icono.png" alt="Safety" width="100" height="100"/></li>
+			    <li><p>Motores Norte</p></li>
+			</ul>
+		</header>
+
+		<aside id="contenido">
+			<nav>
+					<ul>
+						<h2>Información de la entrada</h2>
+						<hr>
+						<li id="MN" onclick="abrirMN()">Motores Norte</li>
+						<hr>
+						<li id="FA" onclick="abrirFA()">Fundiciòn Aluminio</li>
+						<hr>
+						
+					</ul>
+				</nav>
+		</aside>
+		<section class="catalogo">
+			<div>
+				<ul>
+					<!--<br>
+					<li><strong>ID:</strong> PMN01</li>
+					<br>-->
+					<li><strong>Planta:</strong> Motores Norte</li>
+					<br>
+					<li><strong>Ubicación:</strong> Entrada principal</li>
+					<br>
+					<!--<li><strong>Coordenadas:</strong> 19.299705, -99.616433</li>
+					<br> -->
+					<li><strong>EPP necesario:</strong><br>Lentes, Zapatos de seguridad</li>
+					<br>
+				</ul>
+			</div>
+			<div id="fotito">
+				<ul>	
+					<li><img src="../../imagenes/FOTOSMN/MN01.jpg"  width="500px" alt="Mi imagen por defecto"></li>
+					<hr />
+				</ul>
+			</div>
+		</section>
+		<script language="JavaScript" type="text/javascript">
+						function abrirMN() {
+						 document.location.href="../MN.html";
+						}
+						function abrirFA() {
+							document.location.href="../FA.html";
+						}
+						</script>
+		<footer>
+			<small>General Motors Complejo Toluca (2019)</small>
+		</footer>
+	</div>
+</body>
+</html>
