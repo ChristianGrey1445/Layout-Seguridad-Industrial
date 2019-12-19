@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="es">   
+<head>    
+	<meta charset="iso-8859-1">   
+	<meta name="author" content="Cristian Martínez Colín">
+	<meta name="description" content="index.html">
+	<meta name="keyword" content="Layout EPP">
+	<title>Motores Norte</title>
+	<link rel="shortcut icon" type="image/png" href="../imagenes/icono.png"/>
+	<link rel="stylesheet" href="../style/estilos principal.css" />
+	
+</head>
+<body>
+	<div id="cuerpo">
+		<header class="cabecera">
+			<ul>
+				<li><img id="picture" src="../imagenes/icono.png" alt="Safety" width="100" height="100"/></li>
+			    <li><p>Motores Norte</p></li>
+			</ul>
+		</header>
+
+		<aside id="contenido">
+			<h3>Distribución por planta</h3>
+			
+			
+				<nav>
+					<ul>
+						<li id="MN" onclick="abrirMN()">Motores Norte</li>
+						<hr>
+						<li id="FA" onclick="abrirFA()">Fundiciòn Aluminio</li>
+						<hr>
+					</ul>
+
+				</nav>
+				<div id="lista">
+					<ul>
+						<li><input type="radio" onclick="MN01()">01</li>
+						<li><input type="radio" onclick="MN02()">02</li>
+						<li><input type="radio" onclick="MN03()">03</li>
+						<li><input type="radio" onclick="MN04()">04</li>
+						<li><input type="radio" onclick="MN05()">05</li>
+						<li><input type="radio" onclick="MN06()">06</li>
+						<li><input type="radio" onclick="MN07()">07</li>
+						<li><input type="radio" onclick="MN08()">08</li>
+						<li><input type="radio" onclick="MN09()">09</li>
+						<li><input type="radio" onclick="MN10()">10</li>
+					</ul>
+					<ul>
+						<li><input type="radio" onclick="MN11()">11</li>
+						<li><input type="radio" onclick="MN12()">12</li>
+						<li><input type="radio" onclick="MN13()">13</li>
+						<li><input type="radio" onclick="MN14()">14</li>
+						<li><input type="radio" onclick="MN15()">15</li>
+						<li><input type="radio" onclick="MN16()">16</li>
+						<li><input type="radio" onclick="MN17()">17</li>
+						<li><input type="radio" onclick="MN18()">18</li>
+						<li><input type="radio" onclick="MN19()">19</li>
+						<li><input type="radio" onclick="MN20()">20</li>
+					</ul>
+					<ul>
+						<li><input type="radio" onclick="MN21()">21</li>
+						<li><input type="radio" onclick="MN22()">22</li>
+						<li><input type="radio" onclick="MN23()">23</li>
+						<li><input type="radio" onclick="MN24()">24</li>
+						<li><input type="radio" onclick="MN25()">25</li>
+						<li><input type="radio" onclick="MN26()">26</li>
+						
+					</ul>
+				</div>
+				<div id="caja" >
+					<ul>
+						<li id="XMN">MN01</a></li>
+						<li><img id="imagen" src="../imagenes/FOTOSMN/MN01.jpg" alt="MN01" width="250" height="300"/></li>
+						<div>
+						<li><input id="newpage" type="button" onClick="PMN01()" value="Mostrar màs"></li>
+						</div>
+					</ul>
+				</div>
+		</aside>
+		<section class="catalogo">
+			
+<div id="header">
+			<nav> 
+				<ul class="nav">
+					<li><a href="">Casco</a>
+						<ul>
+							<li><a href="">Tipos</a></li>	
+							<li><a href="">Areas de uso obligatorio</a></li>
+							<li><a href="">Consejos de cuidad</a></li>
+						</ul>
+					</li>
+					<li><a href="">Respirador</a>
+						<ul>
+							<li><a href="">Tipos</a></li>	
+							<li><a href="">Areas de uso obligatorio</a></li>
+							<li><a href="">Consejos de cuidad</a></li>
+						</ul>
+					</li>
+					<li><a href="">Zapatos</a>	
+						<ul>
+							<li><a href="">Tipos</a></li>	
+							<li><a href="">Areas de uso obligatorio</a></li>
+							<li><a href="">Consejos de cuidad</a></li>
+						</ul>
+					</li>
+					<li><a href="">Lentes</a>
+						<ul>
+							<li><a href="">Tipos</a></li>	
+							<li><a href="">Areas de uso obligatorio</a></li>
+							<li><a href="">Consejos de cuidad</a></li>
+						</ul>
+					</li>
+					<li><a href="">Auditiva</a> 
+						<ul>
+							<li><a href="">Tipos</a></li>	
+							<li><a href="">Areas de uso obligatorio</a></li>
+							<li><a href="">Consejos de cuidad</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+			<nav>
+				<ul>
+					<li>
+						<canvas id="micanvasMN" width="1118" height="679px" ></canvas>
+						
+						<script>
+							
+
+							var canvas = document.getElementById("micanvasMN");
+							var ctx = canvas.getContext("2d");
+							
+							var screen=1;         //Difuminaciòn
+							var Ok = "62,214,35,"  //Circulos Verdes
+							var Falta= "70,255,0,"  //Circulos amarillos
+							var codigo="MN01";
+							var x=01;
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+
+
+						function abrirMN() {
+						 document.location.href="MN.html";
+
+						}
+						function abrirFA() {
+							document.location.href="FA.html";
+						}
+							
+							
+
+						function MN01() {
+							ctx.beginPath();
+							ctx.arc(720,585,15,0,2*Math.PI);    //ctx.arc(X1, Y1, r, startAngle, endAngle);
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN01";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN02() {
+							ctx.beginPath();
+							ctx.arc(755,590,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN02";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN03() {
+							ctx.beginPath();
+							ctx.arc(855,590,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN03";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN04() {
+							ctx.beginPath();
+							ctx.arc(920,590,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN04";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN05() {
+							ctx.beginPath();
+							ctx.arc(985,590,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN05";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN06() {
+							ctx.beginPath();
+							ctx.arc(1080,280,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN06";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN07() {
+							ctx.beginPath();
+							ctx.arc(985,280,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Falta+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN07";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN08() {
+							ctx.beginPath();
+							ctx.arc(920,280,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Falta+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN08";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN09() {
+							ctx.beginPath();
+							ctx.arc(845,280,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN09";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN10() {
+							ctx.beginPath();
+							ctx.arc(765,250,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN10";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN11() {
+							ctx.beginPath();
+							ctx.arc(765,200,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN11";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN12() {
+							ctx.beginPath();
+							ctx.arc(845,200,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN12";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN13() {
+							ctx.beginPath();
+							ctx.arc(950,220,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN13";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN14() {
+							ctx.beginPath();
+							ctx.arc(765,120,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Falta+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN14";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN15() {
+							ctx.beginPath();
+							ctx.arc(850,125,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Falta+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN15";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN16() {
+							ctx.beginPath();
+							ctx.arc(330,130,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN16";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN17() {
+							ctx.beginPath();
+							ctx.arc(285,270,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Falta+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN17";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN18() {
+							ctx.beginPath();
+							ctx.arc(255,235,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN18";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN19() {
+							ctx.beginPath();
+							ctx.arc(220,235,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN19";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN20() {
+							ctx.beginPath();
+							ctx.arc(220,315,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN20";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN21() {
+							ctx.beginPath();
+							ctx.arc(250,315,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN21";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN22() {
+							ctx.beginPath();
+							ctx.arc(340,320,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN22";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN23() {
+							ctx.beginPath();
+							ctx.arc(270,345,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN23";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN24() {
+							ctx.beginPath();
+							ctx.arc(245,370,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN24";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN25() {
+							ctx.beginPath();
+							ctx.arc(340,395,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN25";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+						function MN26() {
+							ctx.beginPath();
+							ctx.arc(270,570,15,0,2*Math.PI);     
+							ctx.fillStyle = "rgba("+Ok+screen+")";
+							ctx.fill();
+							ctx.lineWidth=2;
+							ctx.strokeStyle = "black";
+							ctx.stroke();
+							codigo="MN26";
+							document.getElementById("XMN").innerHTML = codigo;
+							document.getElementById("imagen").src = "../imagenes/FOTOSMN/"+codigo+".jpg";
+						}
+
+						
+
+						function PMN01() {
+							alert("Se abrira la pagina: P"+codigo+".html");
+							window.open("PMN/P"+codigo+".html","P"+codigo);
+						}
+
+
+						</script>
+						</li>
+					<hr />
+			</ul>
+			</nav>
+		</section>
+		<footer>
+			<small>General Motors Complejo Toluca (2019)</small>
+		</footer>
+	</div>
+</body>
+</html>
